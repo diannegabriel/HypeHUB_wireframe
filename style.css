@@ -1,0 +1,206 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	animation: gradient 15s ease infinite;
+	background: linear-gradient(-45deg, #d83b0c, #ffa856, #fa633d);
+	background-size: 400% 400%;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+.demo {
+  /* background-color: white; */
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  left: 50%;
+  height: 600px;
+  max-height: 80%;
+  max-width: 80%;
+  padding: 10px 15px;
+  /* opacity: 0.2; */
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 1700px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 3em; */
+  color: #fff;
+  /* font-family: 'Patrick Hand', cursive; */
+}
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  justify-content: center;
+}
+.hype {
+  /* font-family: 'Press Start 2P', cursive; */
+  /* font-family: 'Single Day', cursive; */
+  /* color: #fa633d; */
+  font-family: 'Tourney', cursive;
+  font-size: 6em;
+  text-shadow: 0 30px 20px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1);
+}
+.hub {
+  /* color: #fa633d; */
+  /* color: #DAD5ED; */
+  font-family: 'Fredoka One', cursive;
+  /* font-family: 'Concert One', cursive; */
+  /* font-family: 'Single Day', cursive; */
+  /* font-family: 'Gochi Hand', cursive; */
+  /* font-family: 'Sniglet', cursive; */
+  /* font-family: 'Convergence', sans-serif; */
+  /* font-family: 'Autour One', cursive; */
+  /* font-family: 'Short Stack', cursive; */
+  /* padding-top: 5px; */
+  font-size: 6.5em;
+  text-shadow: 0 30px 20px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1);
+}
+.body-text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+  /* color: #fa633d; */
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 30px 20px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1);
+}
+.icon-navi {
+  text-align: center;
+  animation: move 1s infinite alternate;
+  cursor: pointer;
+}
+@keyframes move{
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+.master-box {
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius:  10px;
+  left: 50%;
+  height: 800px;
+  max-height: 80%;
+  max-width: 80%;
+  padding: 10px 15px;
+  /* opacity: 0.8; */
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 1700px;
+  z-index: 10;
+}
+.user-bar {
+  /* background-color: #ff6232; */
+  border-radius: 10px;
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 90%;
+  padding: 10px 25px;
+  width: 600px;
+}
+.avatar {
+  background-color: #bbb;
+  border-radius: 50%;
+  height: 75px;
+  object-fit: cover;
+  margin: 10px 15px 10px 0px;
+  width: 75px;
+}
+.user {
+  /* border: 2px solid #bbb; */
+  display: flex;
+  flex-basis: 85%;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+}
+.user-info {
+  /* border: 2px solid #bbb; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.username {
+  font-family: 'Tourney', cursive;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 0px;
+}
+.user-level {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin: 0px;
+}
+.exp-bar {
+  font-family: 'Roboto', sans-serif;
+  background-color: #bbb;
+  border-radius: 5px;
+  width: 300px;
+  height: 20px;
+  padding-right: 5px;
+  position: relative;
+  text-align: right;
+}
+.exp-bar::after {
+  content:'\A';
+  position: absolute;
+  background:black;
+  border-radius: 5px;
+  top:0; 
+  bottom:0;
+  left:0; 
+  width:50%;
+}
+.master-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+.goals {
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+}
+/* #overlay {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+} */
+footer {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
