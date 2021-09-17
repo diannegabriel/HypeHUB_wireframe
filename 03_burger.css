@@ -78,12 +78,12 @@ body {
   padding-left: 28px;
   background: #fff;
   margin-left: -8px;
-  /* margin-top: -8px; */
+  margin-top: -8px;
   color: #232323;
   padding-bottom: 1rem;
   max-width: 400px;
   width: 90%;
-  height: 105vh;
+  height: 110vh;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   z-index: 2;

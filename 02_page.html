@@ -41,6 +41,24 @@
 		</div>
 		
 		
-		
+		<script>
+			const count = 1;
+			document.querySelectorAll('button').forEach(function(a){
+				a.addEventListener('click', setColor)
+			})
+
+			const col = ["gray","blue","pink"];
+			function setColor() {
+				this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+				this.style.backgroundColor = col[this.dataset.count%col.length] 
+				if (col[this.dataset.count%col.length] === "gray") {
+					document.getElementById("testing1").innerHTML = "Task Done"
+				} else if (col[this.dataset.count%col.length] === "blue") {
+					document.getElementById("testing1").innerHTML = "In Progress"
+				} else if (col[this.dataset.count%col.length] === "pink") {
+					document.getElementById("testing1").innerHTML = "Unfinished"
+				}
+			}
+		</script>
 	</body>
 </html>
