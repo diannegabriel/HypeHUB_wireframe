@@ -68,8 +68,8 @@ li{
   padding-bottom: 1rem;
   max-width: 400px;
   width: 90%;
-  height: 105vh;
-  overflow: scroll;
+  height: 101vh;
+  overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
 
