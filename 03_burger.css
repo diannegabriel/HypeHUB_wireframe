@@ -16,6 +16,7 @@ body {
 	50% { background-position: 100% 50%; }
 	100% { background-position: 0% 50%; }
 }
+
 .master-box {
   background-color: white;
   /* border: 1px solid black; */
@@ -26,13 +27,12 @@ body {
   max-width: 80%;
   padding: 10px 15px;
   /* opacity: 0.8; */
-  position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
   width: 1700px;
-  /* z-index: 10; */
+  position: absolute; 
+  z-index: 1;
   font-family: 'Roboto', sans-serif;
-
 }
 
 .burger input[type="checkbox"]{
@@ -42,7 +42,7 @@ body {
   top: 15px;
   left: 14px;
   display: block;
-  z-index: 3;
+  z-index: 4;
   opacity: 0;
   overflow: hidden;
 }
@@ -53,7 +53,7 @@ body {
   position: absolute;
   top: 25px;
   left: 20px;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,9 +83,11 @@ body {
   padding-bottom: 1rem;
   max-width: 400px;
   width: 90%;
-  height: 100vh;
+  height: 105vh;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
+  z-index: 2;
+  position: absolute;
 }
 
 .burger input[type="checkbox"]:checked ~ .menu-items{
