@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	animation: gradient 15s ease infinite;
+	background: linear-gradient(-45deg, #d83b0c, #ffa856, #fa633d);
+	background-size: 400% 400%;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+.master-box {
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius:  10px;
+  left: 50%;
+  height: 800px;
+  max-height: 80%;
+  max-width: 80%;
+  padding: 10px 15px;
+  /* opacity: 0.8; */
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 1700px;
+  z-index: 10;
+}
+.user-bar {
+  background-color: #e1e1e1;
+  border-radius: 10px;
+  align-items: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 90%;
+  padding: 10px 25px;
+  width: 600px;
+  box-shadow: 0 10px 100px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1);
+
+}
+.avatar {
+  background-color: #bbb;
+  border-radius: 50%;
+  height: 75px;
+  object-fit: cover;
+  margin: 10px 15px 10px 0px;
+  width: 75px;
+}
+.user {
+  /* border: 2px solid #bbb; */
+  display: flex;
+  flex-basis: 85%;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+}
+.user-info {
+  /* border: 2px solid #bbb; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.username {
+  font-family: 'Tourney', cursive;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 0px;
+}
+.user-level {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin: 0px;
+}
+.master-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+.goals {
+  border: 2px solid rgba(0,0,0,0.05);
+  border-radius: 10px;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.exp-bar .bar .progress-line {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  position: absolute;
+  background: #25b79f;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line .exp{
+  width: 80%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  right: 0;
+  top: -14px;
+  width: 0;
+  border: 7px solid transparent;
+}
+
