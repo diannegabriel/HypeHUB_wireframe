@@ -25,13 +25,43 @@
         </div>
 			</div>
 			<div class="master-body">
-				<div class="goals daily"></div>
-				<div class="goals short"></div>
-				<div class="goals long"></div>
+				<div class="goals daily">
+					<h3>Daily Tasks</h3>
+					<button onClick="myFunction()" class="daily-task each-goal">Task 1</button>
+					<button class="daily-task each-goal">Task 2</button>
+				</div>
+				<div class="goals short">
+					<h3>Missions</h3>
+				</div>
+				<div class="goals long">
+					<h3>Quests</h3>
+					<p id="testing1"></p>
+				</div>
 			</div>
 		</div>
 		
 		
-		
+	<script>
+		// function myFunction() {
+		// 	document.getElementById("testing").innerHTML = "Hello World";
+		// }
+		const count = 1;
+		document.querySelectorAll('button').forEach(function(a){
+			a.addEventListener('click', setColor)
+		})
+
+		const col = ["gray","blue","pink"];
+		function setColor() {
+			this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+			this.style.backgroundColor = col[this.dataset.count%col.length] 
+			if (col[this.dataset.count%col.length] === "gray") {
+				document.getElementById("testing1").innerHTML = "Task Done"
+			} else if (col[this.dataset.count%col.length] === "blue") {
+				document.getElementById("testing1").innerHTML = "In Progress"
+			} else if (col[this.dataset.count%col.length] === "pink") {
+				document.getElementById("testing1").innerHTML = "Unfinished"
+			}
+		}
+		</script>
 	</body>
 </html>
