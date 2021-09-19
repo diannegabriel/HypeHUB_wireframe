@@ -1,8 +1,6 @@
 html {
   box-sizing: border-box;
   overflow: hidden;
-  margin:0;
-  padding:0;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -12,8 +10,8 @@ body {
 	background: linear-gradient(-45deg, #d83b0c, #ffa856, #fa633d);
 	background-size: 400% 400%;
 	height: 100vh;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 @keyframes gradient {
@@ -22,22 +20,22 @@ body {
 	100% { background-position: 0% 50%; }
 }
 .quotes {
-  top: 50px;
+  top: 20px;
   width: 100%;
   height: 50px;
   background-color: rgba(255, 2, 2, 0.3);
-  margin-top: 50px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
 }
 .master-box {
   background-color: white;
   /* border: 1px solid black; */
   border-radius:  10px;
   left: 50%;
-  height: 400px;
+  height: 500px;
   max-height: 100%;
   max-width: 80%;
   padding: 10px 15px;
@@ -61,7 +59,7 @@ body {
   /* opacity: 0.8; */
   position: fixed;
   transform: translate(-50%, -50%);
-  top: 27%;
+  top: 22%;
   width: 615px;
   z-index: 10;
   box-shadow: 0 10px 500px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
@@ -127,7 +125,7 @@ body {
 .goals {
   border: 2px solid rgba(0,0,0,0.05);
   border-radius: 10px;
-  height: 300px;
+  height: 350px;
   text-align: center;
   width: 300px;
   box-shadow: 0 10px 50px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
@@ -190,10 +188,27 @@ body {
   border: 7px solid transparent;
 }
 
+.battle-theme {
+  bottom: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  left: 50%;
+  height: 30px;
+  background-color: #d83b0c;
+  transform: translate(-50%, 0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  background: rgba(22,28,83,1);
+  color: #fff;
+}
+
 /* For devices with screen smaller than 1024px */
 @media only screen and (max-width: 550px) {
-  .quotes {
-    opacity: 0;
+  .quotes, .battle-theme {
+    display: none;
   }
 }
 
@@ -203,7 +218,7 @@ body {
     align-items: center;
     height: 100%;
     overflow-y: auto;
-    padding-top: 100px;
+    /* padding-top: 100px; */
   }
   .goals {
     width: 80%;
@@ -214,9 +229,11 @@ body {
   .goals {
     box-shadow: none;
     margin-bottom: 10px;
+    height: 350px;
   }
   .master-box {
     box-shadow: none;
+    padding-top: 50px;
   }
   .user-bar {
     height: 135px;
