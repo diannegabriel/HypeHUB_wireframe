@@ -25,13 +25,13 @@ body {
   height: 50px;
   background-color: rgba(255, 2, 2, 0.3);
   color: #fff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
 }
 .master-box {
-  background-color: white;
+  background-color: rgb(233, 232, 232);
   /* border: 1px solid black; */
   border-radius:  10px;
   left: 50%;
@@ -48,21 +48,19 @@ body {
   box-shadow: 0 10px 500px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
 }
 .user-bar{
-  background-color: white;
-  /* border: 1px solid black; */
+  background-color: #fff;
   border-radius:  10px;
   left: 50%;
   height: 150px;
   max-height: 80%;
   max-width: 80%;
-  padding: 10px 15px;
-  /* opacity: 0.8; */
+  padding: 25px 30px;
   position: fixed;
   transform: translate(-50%, -50%);
   top: 22%;
   width: 615px;
   z-index: 10;
-  box-shadow: 0 10px 500px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -83,13 +81,79 @@ body {
   width: 600px;
   box-shadow: 0 10px 100px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1);
 } */
-.avatar {
+/* .avatar {
   background-color: #bbb;
   border-radius: 50%;
   height: 75px;
   object-fit: cover;
   margin: 10px 15px 10px 0px;
   width: 75px;
+} */
+.avatar {
+  position: relative;
+  width: 80px; 
+  height: 46.19px;
+  margin: 10px 25px 10px 0px;
+  background-image: url(https://lh3.googleusercontent.com/proxy/rdZyIaBX6jhFeMMB6A15G2LnZnBh_uGOxAZ7KLw4La-JPr60_phsiFiWL65Q7ZGAnQJvcmckBIKOlKe3_48vYj6TZzhlSI9xADpYqTLAfeNKlCSQICSLA_LoNuvOHTN-QiIbblwzFwqdWL4agPG2TA);
+  background-size: auto 92.3760px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 56.57px;
+  height: 56.57px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 11.72px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 80.0000px;
+  height: 46.188021535170066px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-23.0940px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-23.0940px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-23.0940px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -28.2843px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -28.2843px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.avatar:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 80.0000px;
+  height: 46.1880px;
+  z-index: 2;
+  background: inherit;
 }
 .user {
   /* border: 2px solid #bbb; */
@@ -132,6 +196,7 @@ body {
   padding: 10px 25px;
   color: #07374a;
   font-family: 'Roboto', sans-serif;
+  background-color: #fff;
 }
 
 .daily-task {
@@ -191,7 +256,7 @@ body {
 .battle-theme {
   bottom: 0px;
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 50%;
   left: 50%;
@@ -202,9 +267,23 @@ body {
   border-top-right-radius: 10px;
   padding: 5px;
   background: rgba(22,28,83,1);
-  color: #fff;
+  color: #fff; 
 }
 
+/* .daily {
+  background-color: #99ceff;
+  background-color: #ffa856;
+}
+
+.short {
+  background-color: #c3c1f1;
+  background-color: #ff820d;
+}
+
+.long {
+  background-color: #b3e9cb;
+  background-color: #fa633d;
+} */
 /* For devices with screen smaller than 1024px */
 @media only screen and (max-width: 550px) {
   .quotes, .battle-theme {
