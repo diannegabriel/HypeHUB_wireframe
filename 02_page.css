@@ -25,7 +25,7 @@ body {
   height: 50px;
   background-color: rgba(255, 2, 2, 0.3);
   color: #fff;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -256,7 +256,7 @@ body {
 .battle-theme {
   bottom: 0px;
   position: fixed;
-  display: none;
+  display: flex;
   justify-content: center;
   width: 50%;
   left: 50%;
