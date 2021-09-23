@@ -6,8 +6,9 @@ html {
   box-sizing: inherit;
 }
 body {
-	animation: gradient 15s ease infinite;
-	background: linear-gradient(-45deg, #d83b0c, #ffa856, #fa633d);
+	/* animation: gradient 15s ease infinite; */
+	/* background: linear-gradient(-45deg, #d83b0c, #ffa856, #fa633d); */
+  background-color: #e76f51;
 	background-size: 400% 400%;
 	height: 100vh;
   margin: 0;
@@ -48,7 +49,7 @@ body {
   box-shadow: 0 10px 500px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
 }
 .user-bar{
-  background-color: #fff;
+  background-color: #f4a261;
   border-radius:  10px;
   left: 50%;
   height: 150px;
@@ -94,7 +95,7 @@ body {
   width: 80px; 
   height: 46.19px;
   margin: 10px 25px 10px 0px;
-  background-image: url(https://lh3.googleusercontent.com/proxy/rdZyIaBX6jhFeMMB6A15G2LnZnBh_uGOxAZ7KLw4La-JPr60_phsiFiWL65Q7ZGAnQJvcmckBIKOlKe3_48vYj6TZzhlSI9xADpYqTLAfeNKlCSQICSLA_LoNuvOHTN-QiIbblwzFwqdWL4agPG2TA);
+  background-image: url(https://lh3.googleusercontent.com/proxy/FJXXHcgCBL6kPul4HNcTRl6gfbM6YrJo8PWEDJrPBtiPsXKQ_zC5T8eTMu1Xaj8Zdle9rIx8zvyy9JGEiNHLeaQVrsBvz9p6Xq_R8EYmkjI6IvzVpVOUA1lcMKgMq8SY6R8YaoJz_prENXcBcw2aDQ);
   background-size: auto 92.3760px;
   background-position: center;
 }
@@ -225,7 +226,7 @@ body {
 
 .bar .progress-line span {
   position: absolute;
-  background: #25b79f;
+  background: #2a9d8f;
   height: 100%;
   border-radius: 10px;
   transform: scaleX(0);
@@ -261,12 +262,11 @@ body {
   width: 50%;
   left: 50%;
   height: 30px;
-  background-color: #d83b0c;
   transform: translate(-50%, 0);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 5px;
-  background: rgba(22,28,83,1);
+  background-color: #264653;
   color: #fff; 
 }
 
